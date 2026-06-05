@@ -11,16 +11,6 @@ Aplikasi Deep Learning berbasis **TensorFlow Functional API** yang dirancang unt
 
 ---
 
-##  Eksperimen & Arsitektur Model
-
-Proyek ini mengeksperimentasikan 3 arsitektur Neural Network yang berbeda untuk mencari performa terbaik:
-
-| Model | Karakteristik / Arsitektur | Train Accuracy | Validation Accuracy | Status Akhir |
-| :--- | :--- | :---: | :---: | :--- |
-| **Model 1** | **Baseline Model:** Arsitektur standar sederhana dengan optimizer Adam default. | 53.30% | 52.54% | Stabil, tapi performa rendah |
-| **Model 2** | **Deeper & Wider:** Struktur diperdalam dan diperlebar tanpa regularisasi. | 73.49% | 53.39% | Overfitting (Menghafal data) |
-| **Model 3** | **Regularized Model:** Menggunakan Dropout Layer & Batch Normalization (Learning Rate: 0.001). | **66.42%** | **57.20%** | **Terbaik & Paling Optimal** |
-
 ##  REST API Architecture (Rencana Deployment)
 
 Model TensorFlow (`.keras` / `.h5`) yang telah dilatih dapat diintegrasikan ke dalam layanan **REST API** berbasis **FastAPI** atau **Flask** untuk melayani prediksi secara real-time.
